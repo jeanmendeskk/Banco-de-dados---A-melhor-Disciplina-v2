@@ -47,7 +47,7 @@ DELIMITER ;
 -- 4 
 
 DELIMITER //
-CREATE PROCEDURE sp_VerificarLivrosCategoria2(IN categoria_valor varchar(100), OUT tf_livros varchar(30))
+CREATE PROCEDURE sp_VerificarLivrosCategoria(IN categoria_valor varchar(100), OUT tf_livros varchar(30))
 BEGIN
 	DECLARE verificar INT;
 	WITH Selet_ID as (

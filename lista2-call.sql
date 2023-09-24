@@ -12,7 +12,7 @@ CALL sp_ContarLivrosPorCategoria('Ciência');
 
 -- 4
 
-CALL sp_VerificarLivrosCategoria2('Ciência', @ver);
+CALL sp_VerificarLivrosCategoria('Ciência', @ver);
 SELECT @ver;
 
 -- 5 
