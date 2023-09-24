@@ -64,3 +64,15 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+-- 5
+
+DELIMITER //
+CREATE PROCEDURE sp_LivrosAteAno(IN ano_esco INT)
+BEGIN
+	SELECT Titulo, Ano_Publicacao
+    FROM livro
+    where Ano_Publicacao <= ano_esco;
+END;
+//
+DELIMITER ;
