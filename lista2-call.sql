@@ -22,3 +22,7 @@ CALL sp_LivrosAteAno(2008);
 -- 6
 
 CALL sp_TitulosPorCategoria(4);
+
+-- 7
+
+CALL sp_AdicionarLivro(21, 'JJ E A Música do Tempo', 2, 2007, 352, 3);
