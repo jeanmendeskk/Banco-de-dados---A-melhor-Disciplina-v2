@@ -10,3 +10,19 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+-- 2
+
+DELIMITER //
+CREATE PROCEDURE sp_LivrosPorCategoria(IN CategoriaE varchar(100))
+BEGIN
+	WITH Selet_id AS (
+		select (select Categoria_ID from categoria where nome = CategoriaE) as id_selecionado
+    )
+    
+    Select Titulo, CategoriaE
+    from livro
+    inner join Selet_id on id_selecionado = Categoria_ID;
+END;
+//
+DELIMITER ;
