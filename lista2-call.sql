@@ -26,3 +26,7 @@ CALL sp_TitulosPorCategoria(4);
 -- 7
 
 CALL sp_AdicionarLivro(21, 'JJ E A Música do Tempo', 2, 2007, 352, 3);
+
+-- 8 
+
+CALL sp_AutorMaisAntigo();

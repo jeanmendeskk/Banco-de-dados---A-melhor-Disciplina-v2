@@ -113,3 +113,16 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+-- 8
+
+DELIMITER //
+CREATE PROCEDURE sp_AutorMaisAntigo()
+BEGIN
+	SELECT Nome, Data_Nascimento
+    from Autor
+    order by data_nascimento asc
+    limit 1;
+END;
+//
+DELIMITER ;
