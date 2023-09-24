@@ -34,3 +34,7 @@ CALL sp_AutorMaisAntigo();
 -- 9
 
 -- o exercício 9 não possui call
+
+-- 10 
+
+CALL sp_LivrosESeusAutores();

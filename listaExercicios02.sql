@@ -139,3 +139,16 @@ BEGIN -- begin serve para marcar o começo de uma procedure, colocado na linha a
 END; -- o end é aliado ao begin, e serve para marcar o fim de uma procedure, e é colocado após o fim do código
 // -- as duas barras são parte da função do delimiter que serve para limitar a procedure
 DELIMITER ; -- o delimiter com ponto e virgula no final serve para colocar um fim a procedure, após ele o código deve ser executado para a procedure ser executada
+
+-- 10 
+
+DELIMITER //
+CREATE PROCEDURE sp_LivrosESeusAutores()
+BEGIN
+    SELECT Livro.Titulo, Autor.Nome, Autor.Sobrenome
+    FROM Livro
+    INNER JOIN Autor_Livro ON Livro.Livro_ID = Autor_Livro.Livro_ID
+    INNER JOIN Autor ON Autor.Autor_ID = Autor_Livro.Autor_ID;
+END;
+//
+DELIMITER ;
