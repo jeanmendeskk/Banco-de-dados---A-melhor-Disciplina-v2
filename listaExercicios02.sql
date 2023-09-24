@@ -76,3 +76,15 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+-- 6
+
+DELIMITER //
+CREATE PROCEDURE sp_TitulosPorCategoria(IN Cate_esco INT)
+BEGIN
+	SELECT Categoria_ID, Titulo
+    FROM livro
+    where Categoria_ID = Cate_esco;
+END;
+//
+DELIMITER ;

@@ -18,3 +18,7 @@ SELECT @ver;
 -- 5 
 
 CALL sp_LivrosAteAno(2008);
+
+-- 6
+
+CALL sp_TitulosPorCategoria(4);
