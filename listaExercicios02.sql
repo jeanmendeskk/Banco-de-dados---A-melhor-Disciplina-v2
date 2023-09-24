@@ -126,3 +126,16 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+-- 9
+
+-- irei explicar o exercicio 1, que é o mais fácil
+
+DELIMITER // -- o delimiter serve para limitar o espaço das procedures, evitando erros no resto do código e deixando ele mais legível
+CREATE PROCEDURE sp_ListarAutores() -- como em qualquer outra parte do sql, o create serve pra criar algo, e nesse caso, para criar a procedure, após o nome da procedure se deve colocar um paranteses, onde você pode ou não inserir algum paramêtro para ser usado somente dentro da procedure
+BEGIN -- begin serve para marcar o começo de uma procedure, colocado na linha abaixo do create
+	SELECT Nome, Sobrenome -- essa linha serve para eu selecionar a informação que eu quero exibir quando eu chamar a procedure
+    FROM Autor; -- essa linha serve para selecionar a tabela onde as informações que eu quero exibir estão presentes
+END; -- o end é aliado ao begin, e serve para marcar o fim de uma procedure, e é colocado após o fim do código
+// -- as duas barras são parte da função do delimiter que serve para limitar a procedure
+DELIMITER ; -- o delimiter com ponto e virgula no final serve para colocar um fim a procedure, após ele o código deve ser executado para a procedure ser executada
